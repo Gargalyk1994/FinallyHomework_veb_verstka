@@ -75,7 +75,9 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     align-items: center; 
     gap: 41px;   
 }
-
+.navigation__left-block svg image{
+    fill:var(--accent-color)
+}
 .navigation__search {
     background-color: #222222;
     cursor: pointer;
@@ -124,7 +126,9 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     align-items: center;
     justify-content: center;
 }
-
+.main-block__image-box{  
+    margin-right: 60px;
+}
 .main-block__image {
     width: 100%; 
     height: 100%;
@@ -176,6 +180,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     height: 260px;
     width: 360px;
     background-size: cover;
+    background-position: center;
     position: relative;
 }
 .offer__box:last-child{
@@ -195,24 +200,25 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     height: 180px;
     background-image: url(../images/offer-image4.png);
 }
-.offer__title {
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0;
-    /* transform: translateY(50%); */
-    transition: 0.5s ease; 
-}
 
 .offer__accent-text {
     color: var(--accent-color);
 }
-
+.offer__title{
+    position: absolute;
+    top: 1;
+    bottom: 1;
+    left: 1;
+    right: 1;
+    z-index: 1;
+    opacity: 0;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
 .offer__dark-card {
     position: absolute;
-    background-color: #c62424b3;
+    background-color: #211616b3;
     top: 0;
     bottom: 0;
     left: 0;
@@ -225,7 +231,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
 .offer__card:hover .offer__title {
     opacity: 1;
 }
-.offer-card:hover .offer__dark-card {
+.offer__dark-card:hover {
     opacity: 0.8;
 }
 
@@ -252,6 +258,79 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
 .products__card {
     max-width: 360px;
 }
+.products__image-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 360px;
+    min-height: 420px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.products__icon-cart{
+    width: 26px;
+    height: 24px;
+}
+.products__image-box-background1{
+    background-image: url(../images/product1.png);
+}
+.products__image-box-background2{
+    background-image: url(../images/product2.png);
+}
+.products__image-box-background3{
+    background-image: url(../images/product3.png);
+}
+.products__image-box-background4{
+    background-image: url(../images/product4.png);
+}
+.products__image-box-background5{
+    background-image: url(../images/product5.png);
+}
+.products__image-box-background6{
+    background-image: url(../images/product6.png);
+}
+.products__button-add-to-cart{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 13px;
+    border: 1px solid #ffffff;
+    background-color:rgb(255, 255, 255, 0);
+    position: absolute;
+    top: 1;
+    bottom: 1;
+    left: 1;
+    right: 1;
+    z-index: 2;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+.products__text-add-cart{
+    color: rgb(255, 255, 255, 1);
+    font-size: 14px;
+    line-height: 17px;
+}
+.products__dark-background{
+    position: absolute;
+    background-color: #3a3838db;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.products__image-box:hover .products__dark-background {
+    opacity: 0.8;
+}
+.products__image-box:hover .products__button-add-to-cart {
+    cursor: pointer;
+    opacity: 1;
+}
+
 .products__text{
     background-color: #f8f8f8;
     padding: 24px 16px;
@@ -284,6 +363,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     color: var(--accent-color);
     font-size: 16px;
     line-height: 19px;
+    cursor: pointer;
     margin-bottom: 95px;
 }
 
@@ -320,15 +400,24 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
 }
 
 .subscribe-info {
-    background-image: url(../images/background-subscribe.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
+}
+.subscribe-info__bg-image{
+    min-height: 448px;
+    width: 100%;
+    z-index: 0;
+    opacity: 0.5;
 }
 .subscribe-info__block {
-    min-height: 448px;
+    position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
 }
 .subscribe-info__left-block {
     max-width: 360px;
