@@ -89,6 +89,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     display: flex;
     align-items: center; 
     gap: 33px;
+    position: relative;
 }
 .navigation__menu {
     background-color: transparent;
@@ -115,7 +116,17 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     width: 32px;
     height: 29px;
 }
-
+.counter-cart{
+    display: block;
+    font-size: 12px;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    position: absolute;
+    top: 15px;
+    right: -10px;
+}
 .header {
     background-color: var(--pink-color);
 }
@@ -125,6 +136,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .main-block__image {
@@ -136,7 +148,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     max-width: 405px;
 }
 
-.main-block__right-block::before{
+.main-block__title-h1::before{
     content: "";
     background-color: var(--accent-color);
     width: 12px;
@@ -148,17 +160,55 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
 .main-block__title-h1 {
     font-weight: 900;
     font-size: 48px;
+    line-height: 1;
     text-transform: uppercase;
 }
-.main-block__title-h2 {
+.main-block__title-other1 {
     font-size: 32px;
-    text-transform: uppercase;
 }
 
-.main-block__title-h2::after{
-    content: " fashion";
+.main-block__title-other2{
+    font-size: 32px;
     color: var(--accent-color);
 }
+.hamburger-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 32px 72px 32px 32px;
+    background-color: #fff;
+}
+.hamburger-menu__title{
+    font-size: 14px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+.hamburger-menu details{
+    display: flex;
+    flex-direction: column;
+    gap: 11px; /* не работает странно*/
+    margin-bottom: 20px;
+}
+.hamburger-menu details:last-child{
+    margin: 0;
+}
+.hamburger-menu summary{
+    font-size: 14px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    margin-bottom: 11px;
+}
+.hamburger-menu__link{
+    font-size: 14px;
+    color: #6f6e6e;
+    text-decoration: none;
+    margin-bottom: 11px;
+}
+.hamburger-menu__link:hover{
+    text-decoration: underline;
+}
+
 
 .offer {
     padding: 65px 0 96px;
@@ -270,6 +320,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     height: 420px;
     background-size: cover;
     background-position: center;
+    transition: all 1s ease;
     /* position: relative; */
 }
 .products__icon-cart{
@@ -295,15 +346,13 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     background-image: url(../images/product6.png);
 }
 .products__button-add-to-cart{
-    
     /* position: absolute;
     top: 1;
     bottom: 1;
     left: 1;
     right: 1;
     z-index: 2; */
-    opacity: 0;
-    transition: 0.5s ease;
+    display: none;
 }
 
 .products__dark-background{
@@ -313,19 +362,19 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     left: 0;
     right: 0;
     z-index: 1; */
-    opacity: 0;
-    transition: 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-out;
 }
 
 .products__image-box:hover .products__dark-background {
-    background-color: #3a3838db;
+    background-color: #3a3838b2;
     width: 100%;
     height: 100%;
-    opacity: 0.8;
+    /* opacity: 0.8; */
 }
 .products__image-box:hover .products__button-add-to-cart {
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -337,7 +386,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     border: 1px solid #ffffff;
     background-color: transparent;
     cursor: pointer;
-    opacity: 1;
+    /* opacity: 1; */
 }
 
 .products__text{
@@ -375,7 +424,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     cursor: pointer;
     margin-bottom: 95px;
 }
-
+.products__button:hover{
+    color: white;
+    background-color: var(--accent-color);
+}
 .feature {
     background-color: #222224;
 }
@@ -409,24 +461,19 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
 }
 
 .subscribe-info {
-    position: relative;
+    background-image: url(../images/background-subscribe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.subscribe-info__bg-image{
-    min-height: 448px;
-    width: 100%;
-    z-index: 0;
-    opacity: 0.5;
+.subscribe-info__bgc{
+    background-color: rgba(244, 244, 244, 0.7);
 }
+
 .subscribe-info__block {
-    position: absolute;
+    min-height: 448px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
 }
 .subscribe-info__left-block {
     max-width: 360px;
@@ -462,6 +509,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 32px;
+}
+
+.subscribe-info__block-form{
+    display: flex; /*нужно чтобы input и button склеились*/
 }
 .subscribe-info__input-subscribe {
     color: #222224;
@@ -506,7 +557,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     background-color: #ffffff;
     width: 32px;
     height: 32px;
-    padding: 8px 11px;
+    padding: 8px 10px;
     transition: all 0.3s;
 }
 .footer__box-icon:hover {

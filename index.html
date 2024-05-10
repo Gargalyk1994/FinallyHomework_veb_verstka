@@ -40,6 +40,7 @@
                         <button class="navigation__cart">
                             <img src="images/cart.svg" alt="Cart" class="navigation__cart-icon">
                         </button>
+                        <span class="counter-cart text-regular" name="5">5</span>
                     </div>
                 </nav>
             </div>
@@ -49,8 +50,37 @@
                 <img src="images/man_with_jacket.svg" alt="Man with jacket" class="main-block__image">
             </div>
             <div class="main-block__right-block">
-                <h1 class="main-block__title-h1 text-bold">The brand</h1>
-                <h2 class="main-block__title-h2 text-bold" >of luxerious</h2>
+                <h1 class="main-block__title-h1 text-bold">The brand
+                    <span class="main-block__title-other1">of luxerious</span>
+                    <span class="main-block__title-other2"> fashion</span>
+                </h1>
+            </div>
+            <div class="hamburger-menu">
+                <h4 class="hamburger-menu__title text-bold">Menu</h4>
+                <details class="text-regular">
+                    <summary class="hamburger-menu__for-men text-regular">Man</summary>
+                    <a href="#" class="hamburger-menu__link">Accessories</a>
+                    <a href="#" class="hamburger-menu__link">Bags</a>
+                    <a href="#" class="hamburger-menu__link">Denim</a>
+                    <a href="#" class="hamburger-menu__link">T-Shirts</a>
+                </details>
+                <details class="text-regular">
+                    <summary class="hamburger-menu__for-women text-regular">Woman</summary>
+                    <a href="#" class="hamburger-menu__link">Accessories</a>
+                    <a href="#" class="hamburger-menu__link">Jackets & Coats</a>
+                    <a href="#" class="hamburger-menu__link">Polos</a>
+                    <a href="#" class="hamburger-menu__link">T-Shirts</a>
+                    <a href="#" class="hamburger-menu__link">Shirts</a>
+                </details>
+                <details class="text-regular">
+                    <summary class="hamburger-menu__for-kids text-regular">Kids</summary>
+                    <a href="#" class="hamburger-menu__link">Accessories</a>
+                    <a href="#" class="hamburger-menu__link">Jackets & Coats</a>
+                    <a href="#" class="hamburger-menu__link">Polos</a>
+                    <a href="#" class="hamburger-menu__link">T-Shirts</a>
+                    <a href="#" class="hamburger-menu__link">Shirts</a>
+                    <a href="#" class="hamburger-menu__link">Bags</a>
+                </details>
             </div>
         </section>    
     </header>
@@ -223,19 +253,21 @@
     </section>
 
     <section class="subscribe-info">
-        <img src="/images/background-subscribe.png" alt="" class="subscribe-info__bg-image">
-        <div class="container">
-            <div class="subscribe-info__block">
-                <div class="subscribe-info__left-block">
-                    <img src="images/subscribe-avatar.svg" alt="" class="subscribe-info__avatar">
-                    <aside class="subscribe-info__quote text-italic">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</aside>
-                </div>
-                <div class="subscribe-info__right-block">
-                    <h3 class="subscribe-info__title text-bold">Subscribe</h3>
-                    <h4 class="subscribe-info__text text-regular"> 
-                        For our newletter and promotion</h4>
-                    <input type="text" class="subscribe-info__input-subscribe text-regular" placeholder="Enter Your Email">
-                    <button class="subscribe-info__button-subscribe text-regular">Subscribe</button>
+        <div class="subscribe-info__bgc">
+            <div class="container">
+                <div class="subscribe-info__block">
+                    <div class="subscribe-info__left-block">
+                        <img src="images/subscribe-avatar.svg" alt="#" class="subscribe-info__avatar">
+                        <article class="subscribe-info__quote text-italic">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</article>
+                    </div>
+                    <div class="subscribe-info__right-block">
+                        <h3 class="subscribe-info__title text-bold">Subscribe</h3>
+                        <h4 class="subscribe-info__text text-regular">For our newletter and promotion</h4>
+                        <form action="#" class="subscribe-info__block-form">
+                            <input type="email" class="subscribe-info__input-subscribe text-regular" placeholder="Enter Your Email">
+                            <button class="subscribe-info__button-subscribe text-regular">Subscribe</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
