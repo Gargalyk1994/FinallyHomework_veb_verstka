@@ -61,6 +61,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     font-family: "Lato-Italic", sans-serif;
 }
 
+.hidden{
+    display: none;
+}
+
 .navigation {
     background-color: #222222;
 }
@@ -178,21 +182,24 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     padding: 32px 72px 32px 32px;
     background-color: #fff;
 }
+.hamburger-menu__close{
+    width: 10px;
+    color: #000;
+}
+
 .hamburger-menu__title{
     font-size: 14px;
     color: #000;
     text-transform: uppercase;
     margin-bottom: 24px;
 }
-.hamburger-menu details{
+.hamburger-menu__links{
     display: flex;
     flex-direction: column;
-    gap: 11px; /* не работает странно*/
+    gap: 11px; 
     margin-bottom: 20px;
 }
-.hamburger-menu details:last-child{
-    margin: 0;
-}
+
 .hamburger-menu summary{
     font-size: 14px;
     color: var(--accent-color);
@@ -203,8 +210,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     font-size: 14px;
     color: #6f6e6e;
     text-decoration: none;
-    margin-bottom: 11px;
 }
+
 .hamburger-menu__link:hover{
     text-decoration: underline;
 }
@@ -512,14 +519,16 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
 }
 
 .subscribe-info__block-form{
+    max-width: 356px;
     display: flex; /*нужно чтобы input и button склеились*/
+    justify-content: center;
 }
 .subscribe-info__input-subscribe {
     color: #222224;
     font-size: 14px;
     line-height: 17px;
-    width: 256px;
-    height: 49px;
+    /* max-width: 256px; */
+    min-height: 49px;
     padding: 7px 64px 6px 22px;
     border-radius: 25px 0 0 25px;
 }
@@ -528,8 +537,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
     font-size: 14px;
     line-height: 17px;
     text-align: center;
-    width: 100px;
-    height: 49px;
+    /* max-width: 100px; */
+    min-height: 49px;
     background-color: var(--accent-color);
     padding: 7px 7px 6px 8px;
     border-radius: 0 25px 25px 0;
