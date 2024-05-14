@@ -3,7 +3,7 @@
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
     }
-    .navigation, .footer__block{
+    .navigation, .header__main-block, .footer__block{
         padding: 0 20px;
     }
     .navigation__right-block{
@@ -24,9 +24,6 @@
     .products__cards {
         padding: 0 20px;
         grid-template-columns: repeat(1, 1fr);
-    }
-    .main-block__right-block {
-        padding: 0 20px;
     }
     .feature {
         padding: 48px 14px 64px;
