@@ -1,0 +1,343 @@
+
+
+@mixin header(){
+    .navigation {
+        background-color: $backBlockColor;
+        &__box{
+            min-height: 75px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__left-block {
+            display: flex;
+            align-items: center; 
+            gap: 41px;
+            svg image{
+                fill: $accent-color;
+            }
+        }
+        &__search {
+            background-color: $backBlockColor;
+            cursor: pointer;
+            width: 26px;
+            height: 27px;
+        }
+        &__right-block {
+            display: flex;
+            align-items: center; 
+            gap: 33px;
+            position: relative;
+        }
+        &__menu {
+            background-color: transparent;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        &__menu-icon {
+            background-color: #e8e8e8;
+            width: 32px;
+            height: 2px;
+        }
+        &__profile {
+            background-color: $backBlockColor;
+            cursor: pointer;
+            width: 29px;
+            height: 29px;
+        }
+        &__cart {
+            background-color: $backBlockColor;
+            cursor: pointer;
+            width: 32px;
+            height: 29px;
+        }
+        .counter-cart{
+            display: block;
+            font-size: 12px;
+            color: $colorText1;
+            padding: 3px 6px;
+            border-radius: 50%;
+            background-color: $accent-color;
+            position: absolute;
+            top: 15px;
+            right: -10px;
+        }
+    }
+}
+
+@mixin hamburgerMenu(){
+    .hamburger-menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 32px 72px 32px 32px;
+        background-color: $colorText1;
+        &__close{
+            width: 10px;
+            color: #000;
+        }
+        
+        &__title{
+            font-size: 14px;
+            color: #000;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        &__links{
+            display: flex;
+            flex-direction: column;
+            gap: 11px; 
+            margin-bottom: 20px;
+        }
+        
+        .hamburger-menu summary{
+            font-size: 14px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            margin-bottom: 11px;
+        }
+        &__link{
+            font-size: 14px;
+            color: #6f6e6e;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        
+    }
+}
+
+@mixin blockProducts(){
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px 30px;
+        margin-bottom: 42px;
+    }
+    &__card {
+        max-width: 360px;
+    }
+    &__image-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 420px;
+        background-size: cover;
+        background-position: center;
+        transition: all 1s ease;
+        /* position: relative; */
+        &:hover .products__dark-background {
+            background-color: #3a3838b2;
+            width: 100%;
+            height: 100%;
+            /* opacity: 0.8; */
+        }
+        &:hover .products__button-add-to-cart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 13px;
+            color: $colorText1;
+            font-size: 14px;
+            line-height: 17px;
+            border: 1px solid $colorText1;
+            background-color: transparent;
+            cursor: pointer;
+            /* opacity: 1; */
+        }
+    }
+    &__icon-cart{
+        width: 26px;
+        height: 24px;
+    }
+    &__button-add-to-cart{
+        /* position: absolute;
+        top: 1;
+        bottom: 1;
+        left: 1;
+        right: 1;
+        z-index: 2; */
+        display: none;
+    }
+    &__dark-background{
+        /* position: absolute; */
+        /* top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 1s ease-out;
+    }
+    &__text{
+        background-color: $colorText2;
+        padding: 24px 16px;
+    }
+    &__card-title {
+        color: #000000;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+    &__card-description {
+        color: #5d5d5d;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 16px;
+    }
+    &__card-price {
+        color: $accent-color;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+}
+
+@mixin subscribe(){
+    background-image: url(../images/background-subscribe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__bgc{
+        background-color: rgba(244, 244, 244, 0.7);
+    }
+    
+    &__block {
+        min-height: 448px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__left-block {
+        max-width: 360px;
+        min-height: 225px;
+    }
+    &__avatar {
+        display: block;
+        width: 96px;
+        height: 96px;
+        margin: 0 auto 30px;
+    }
+    &__quote {
+        color: $backBlockColor;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+    }
+    &__right-block {
+        max-width: 557px;
+        min-height: 142px;
+    }
+    &__title {
+        color: $backBlockColor;
+        font-size: 24px;
+        line-height: 167.2%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__text {
+        color: $backBlockColor;
+        font-size: 18px;
+        line-height: 167.2%;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 32px;
+    }
+    
+    &__block-form{
+        max-width: 356px;
+        display: flex; /*нужно чтобы input и button склеились*/
+        justify-content: center;
+    }
+    &__input-subscribe {
+        color: $backBlockColor;
+        font-size: 14px;
+        line-height: 17px;
+        /* max-width: 256px; */
+        min-height: 49px;
+        padding: 7px 64px 6px 22px;
+        border-radius: 25px 0 0 25px;
+    }
+    &__button-subscribe {
+        color: $colorText1;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        /* max-width: 100px; */
+        min-height: 49px;
+        background-color: $accent-color;
+        padding: 7px 7px 6px 8px;
+        border-radius: 0 25px 25px 0;
+    }
+}
+
+@mixin blockFuture(){
+    background-color: $backBlockColor;
+    &__items {
+        min-height: 341px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    &__item{
+        max-width: 360px;
+        min-height: 133px;
+    }
+    &__image {
+        display: block;
+        margin: 0 auto 19px;
+    }
+    &__title {
+        color: $colorText2;
+        font-size: 19.96px;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    &__description {
+        color: $colorText2;
+        font-size: 13.97px;
+        line-height: 17px;
+        text-align: center;
+    }
+}
+
+@mixin footer(){
+    background-color: $backBlockColor;
+    &__block{
+        min-height: 79px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__rights {
+        color: $colorText2;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    &__block-icons {
+        display: flex;
+        gap: 7px;
+    }
+    &__box-icon {
+        background-color: $colorText1;
+        width: 32px;
+        height: 32px;
+        padding: 8px 10px;
+        transition: all 0.3s;
+        &:hover {
+            background-color: $accent-color;
+        }
+        &:hover path {
+            fill: $colorText1;
+        }
+    }
+}

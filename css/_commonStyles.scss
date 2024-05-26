@@ -1,0 +1,40 @@
+html {
+    box-sizing: border-box;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+  
+h1, h2, h3, h4, h5, h6, p, ul, ol, figure, input, textarea, button {
+    border-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.text-bold{
+    font-family: "Lato-Bold", sans-serif;
+}
+
+.text-regular{
+    font-family: "Lato-Regular", sans-serif;
+}
+
+.text-light{
+    font-family: "Lato-Light", sans-serif;
+}
+
+.text-italic{
+    font-family: "Lato-Italic", sans-serif;
+}
+
+.hidden{
+    display: none;
+}

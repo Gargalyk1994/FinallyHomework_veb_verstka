@@ -1,0 +1,53 @@
+@import './normalize.scss';
+@import './commonStyles.scss';
+@import './fonts.scss';
+@import './mixins.scss';
+@import './vars.scss';
+
+.header{
+    @include header();
+}
+
+.products{
+    @include blockProducts();
+    &__image-box-background1{
+        background-image: url(../images/product1.png);
+    }
+    &__image-box-background2{
+        background-image: url(../images/product2-2.png);
+    }
+    &__image-box-background3{
+        background-image: url(../images/product3.png);
+    }
+    &__image-box-background4{
+        background-image: url(../images/product4.png);
+    }
+    &__image-box-background5{
+        background-image: url(../images/product5-2.png);
+    }
+    &__image-box-background6{
+        background-image: url(../images/product6-2.png);
+    }
+    &__image-box-background7{
+        background-image: url(../images/product7.png);
+    }
+    &__image-box-background8{
+        background-image: url(../images/product8.png);
+    }
+    &__image-box-background9{
+        background-image: url(../images/product9.png);
+    }
+}
+
+.feature {
+    @include blockFuture();
+}
+
+.subscribe-info {
+    @include subscribe();
+}
+
+.footer {
+    @include footer();
+}
+@import './media.scss';
