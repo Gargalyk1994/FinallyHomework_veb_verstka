@@ -5,7 +5,6 @@
 @import './vars.scss';
 
 .header {
-    @include header();
     .main-block {
         max-height: 764px;
         background-color: $pink-color;
@@ -44,8 +43,6 @@
         }
     }
 }
-
-@include hamburgerMenu();
 
 .offer {
     padding: 65px 0 96px;
@@ -125,7 +122,6 @@
 }
 
 .products{
-    @include blockProducts();
     &__title {
         color: $backBlockColor;
         font-size: 30px;
@@ -159,33 +155,9 @@
         background-image: url(../images/product6.png);
     }
     &__button {
-        display: block;
-        width: 211px;
-        height: 48px;
-        margin: 0 auto;
-        border: 1px solid $accent-color;
-        color: var $accent-color;
-        font-size: 16px;
-        line-height: 19px;
-        cursor: pointer;
-        margin-bottom: 95px;
-        &:hover{
-            color: $colorText1;
-            background-color: $accent-color;
-        }
+        @include button();
+        margin: 0 auto 95px;
     }
-}
-
-.feature {
-    @include blockFuture();
-}
-
-.subscribe-info {
-    @include subscribe();
-}
-
-.footer {
-    @include footer();
 }
 
 @import './media.scss';
