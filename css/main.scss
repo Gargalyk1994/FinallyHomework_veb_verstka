@@ -8,9 +8,7 @@
     .main-block {
         max-height: 764px;
         background-color: $pink-color;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexCenter();
         position: relative;
         &__image {
             width: 100%; 
@@ -19,13 +17,16 @@
         &__right-block {
             height: 100%;
             max-width: 405px;
+            font-family: $fontBold;
+            font-size: 32px;
+            font-weight: 700;
         }
         &__title-h1::before{
             content: "";
             background-color: $accent-color;
             width: 12px;
-            height: 92px;
             float: left;
+            height: 92px;
             margin-right: 16px;
         }
         &__title-h1 {
@@ -47,17 +48,14 @@
 .offer {
     padding: 65px 0 96px;
     &__box {
-        display: flex;
-        justify-content: center;
+        @include flexCenter();
         gap: 30px;
         &:last-child{
             flex-wrap: wrap;
         }
     }
     &__card{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCenter();
         height: 260px;
         width: 360px;
         background-size: cover;
@@ -84,8 +82,16 @@
         height: 180px;
         background-image: url(../images/offer-image4.png);
     }
+    &__text{
+        color: $colorText1;
+        font-family: $fontRegular;
+        font-weight: 400;
+        font-size: 16px;
+    }
     &__accent-text {
         color: $accent-color;
+        font-family: $fontBold;
+        font-size: 24px;
     }
     &__title{
         opacity: 0;
@@ -96,9 +102,7 @@
         right: 1;
         z-index: 1;
         opacity: 0; */
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexCenter();
         flex-direction: column;
         width: 100%;
         height: 100%;
@@ -124,6 +128,7 @@
 .products{
     &__title {
         color: $backBlockColor;
+        font-family: $fontRegular;
         font-size: 30px;
         line-height: 36px;
         text-align: center;
@@ -131,6 +136,7 @@
     }
     &__description {
         color: #9f9f9f;
+        font-family: $fontRegular;
         font-size: 14px;
         line-height: 17px;
         text-align: center;

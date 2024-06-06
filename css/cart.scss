@@ -1,0 +1,180 @@
+@import './normalize.scss';
+@import './commonStyles.scss';
+@import './fonts.scss';
+@import './mixins.scss';
+@import './vars.scss';
+
+.cart{
+    padding: 96px 0 128px;
+    &__wrapper{
+        @include flexBetween();
+    }
+    &__left-block{
+        &_wrap-cards{
+            @include flexColumn();
+            gap: 40px;
+            margin-bottom: 72px;
+        }
+    }
+    &__right-block{
+        @include flexColumn();
+        gap: 57px;
+    }
+}
+
+.card{
+    max-width: 652px;
+    height: 306px;
+    display: flex;
+    box-shadow: 17px 19px 24px 0 rgba(0, 0, 0, 0.13);
+    &__wrapper{
+        
+    }
+    &__image{
+        height: 100%;
+        width: 262px;
+    }
+    &__box{
+        padding: 22px 22px 62px 31px;
+        background-color: #fff;
+    }
+    &__top{
+        @include flexBetween();
+        margin-bottom: 42px;
+    }
+    &__title{
+        font-family: $fontRegular;
+        font-weight: 400;
+        font-size: 24px;
+        color: $backBlockColor;
+        text-transform: uppercase;
+        margin-right: 57px;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    &__cross:hover path{
+        fill: $accent-color;
+    }
+    &__bottom{
+        @include flexColumn();
+        gap: 6px;
+    }
+    &__character{
+        font-family: $fontRegular;
+        font-weight: 400;
+        font-size: 22px;
+        color: #575757;
+        &_accent-text{
+            color: $accent-color;
+        }
+        &_other-text{
+            color: $colorText3;
+        }
+        &_count{
+            width: 44px;
+            height: 25px;
+            border: 1px solid #eaeaea;
+            padding-left: 8px;
+        }
+        &_number{
+            padding-right: 24px;
+        }
+    }
+    &__btns{
+        @include flexBetween();
+    }
+    &__btn{
+        @include button();
+        font-family: $fontRegular;
+        font-weight: 400;
+        font-size: 14px;
+        border: 1px solid #a4a4a4;
+        color: #000;
+        text-transform: uppercase;
+    }
+}
+    
+
+.shipping{
+    @include flexColumn();
+    gap: 20px;
+    &__title{
+        font-family: $fontRegular;
+        font-weight: 400;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+    }
+    &__adress{
+        width: 360px;
+        height: 45px;
+        border: 1px solid #a4a4a4;
+        padding: 13px 17px 16px;
+    }
+    &__button{
+        @include button();
+        width: 101px;
+        height: 35px;
+        font-family: $fontRegular;
+        font-weight: 400;
+        font-size: 11px;
+        color: #4a4a4a;
+        border: 1px solid #a4a4a4;
+        padding: 8px 13px 12px;
+        text-transform: uppercase;
+    }
+}
+
+.confirm-price{
+    padding: 38px 43px 42px 44px;
+    background-color: #f5f3f3;
+    &__total{
+        @include flexEnd();
+        gap: 70px;
+        color: #4a4a4a;
+        font-family: $fontRegular;
+        font-weight: 400;
+        text-transform: uppercase;
+        &:first-child{
+            margin-bottom: 13px;
+        }
+        &:last-of-type{
+            padding-bottom: 21px;
+            margin-bottom: 21px;
+            border-bottom: 1px solid #e2e2e2;
+        }
+    }
+    
+    &__sub, &__sub-price{
+        font-size: 11px;
+    }
+    &__grand, &__grand-price{
+        font-size: 16px;
+    }
+    &__sub-price, &__grand-price{
+        &::before{
+            content: "\0024";
+        }
+    }
+    &__grand-price{
+        font-weight: 700;
+        color: $accent-color;
+    }
+    &__button{
+        background-color: $accent-color;
+        padding: 15px 43px;
+        font-family: $fontRegular;
+        font-size: 16px;
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover{
+            color: #222;
+            background-color: #fff;
+            border: 1px solid $colorText3;
+        }
+    }
+}
+
+

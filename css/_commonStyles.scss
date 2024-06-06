@@ -34,21 +34,7 @@ summary::-webkit-details-marker{
 a{
     text-decoration: none;
 }
-.text-bold{
-    font-family: "Lato-Bold", sans-serif;
-}
 
-.text-regular{
-    font-family: "Lato-Regular", sans-serif;
-}
-
-.text-light{
-    font-family: "Lato-Light", sans-serif;
-}
-
-.text-italic{
-    font-family: "Lato-Italic", sans-serif;
-}
 
 .hidden{
     display: none;
@@ -59,12 +45,10 @@ a{
         background-color: $backBlockColor;
         &__box{
             min-height: 75px;
-            display: flex;
-            justify-content: space-between;
+            @include flexBetween();
         }
         &__left-block {
-            display: flex;
-            align-items: center; 
+            @include flexAlign();
             gap: 41px;
             svg image{
                 fill: $accent-color;
@@ -77,16 +61,14 @@ a{
             height: 27px;
         }
         &__right-block {
-            display: flex;
-            align-items: center; 
+            @include flexAlign();
             gap: 33px;
             position: relative;
         }
         &__menu {
             background-color: transparent;
             cursor: pointer;
-            display: flex;
-            flex-direction: column;
+            @include flexColumn();
             gap: 8px;
         }
         &__menu-icon {
@@ -106,9 +88,11 @@ a{
             width: 32px;
             height: 29px;
         }
-        .counter-cart{
+        &__count-cart{
             display: block;
             font-size: 12px;
+            font-family: $fontRegular;
+            line-height: 14px;
             color: $colorText1;
             padding: 3px 6px;
             border-radius: 50%;
@@ -125,9 +109,8 @@ a{
     &__box{
         height: 148px;
         text-transform: uppercase;
-        display: flex;
+        @include flexBetween();
         align-items: center;
-        justify-content: space-between;
     }
     &__title{
         font-family: $fontRegular;
@@ -138,11 +121,19 @@ a{
         font-family: $fontLight;
         font-size: 14px;
         color: $colorText3;
+        &:not(:last-of-type)::after{
+            content: "/";
+            padding-left: 5px;
+        }
+        &:last-of-type{
+            font-weight: 700;
+            color: $accent-color;
+        }
+        &:hover{
+            color: $accent-color;
+        }
     }
-    &__breadcrumbs-item.current-page{
-        font-weight: 700;
-        color: $accent-color;
-    }
+    
     &__breadcrumbs{
         display: flex;
         gap: 5px;
@@ -150,19 +141,30 @@ a{
 }
 
 .hamburger-menu{
+    width: 232px;
     position: absolute;
     top: 0;
     right: 0;
     padding: 32px 72px 32px 32px;
     background-color: $colorText1;
+    &__main-links{
+        @include flexBetween();
+    }
     &__close{
         width: 10px;
         color: #000;
     }
-    
-    &__title{
+    &__item{
+        color: $colorText3;
+        font-family: $fontRegular;
         font-size: 14px;
+        line-height: 17px;
+    }
+    &__title{
         color: #000;
+        font-family: $fontBold;
+        font-size: 14px;
+        line-height: 17px;
         text-transform: uppercase;
         margin-bottom: 24px;
     }
@@ -172,16 +174,20 @@ a{
         gap: 11px; 
         margin-bottom: 20px;
     }
-    
-    .hamburger-menu summary{
+    &__for-people{
+        font-family: $fontRegular;
         font-size: 14px;
-        color: var(--accent-color);
+        line-height: 17px;
+        color: $accent-color;
         text-transform: uppercase;
+        cursor: pointer;
         margin-bottom: 11px;
     }
     &__link{
-        font-size: 14px;
         color: #6f6e6e;
+        font-family: $fontRegular;
+        font-size: 14px;
+        line-height: 17px;
         text-decoration: none;
         &:hover{
             text-decoration: underline;
@@ -201,9 +207,7 @@ a{
         max-width: 360px;
     }
     &__image-box{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCenter();
         width: 100%;
         height: 420px;
         background-size: cover;
@@ -243,6 +247,10 @@ a{
         right: 1;
         z-index: 2; */
         display: none;
+        color: $colorText1;
+        font-family: $fontRegular;
+        font-size: 14px;
+        line-height: 17px;
     }
     &__dark-background{
         /* position: absolute; */
@@ -251,9 +259,7 @@ a{
         left: 0;
         right: 0;
         z-index: 1; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCenter();
         transition: all 1s ease-out;
     }
     &__text{
@@ -261,6 +267,7 @@ a{
         padding: 24px 16px;
     }
     &__card-title {
+        font-family: $fontRegular;
         color: #000000;
         font-size: 13px;
         line-height: 16px;
@@ -269,15 +276,49 @@ a{
         margin-bottom: 16px;
     }
     &__card-description {
+        font-family: $fontLight;
         color: #5d5d5d;
         font-size: 14px;
         line-height: 17px;
         margin-bottom: 16px;
     }
     &__card-price {
+        font-family: $fontRegular;
         color: $accent-color;
         font-size: 16px;
         line-height: 19px;
+    }
+}
+
+.feature {
+    background-color: $backBlockColor;
+    &__items {
+        min-height: 341px;
+        @include flexCenter();
+        gap: 30px;
+    }
+    &__item{
+        max-width: 360px;
+        min-height: 133px;
+    }
+    &__image {
+        display: block;
+        margin: 0 auto 19px;
+    }
+    &__title {
+        font-family: $fontRegular;
+        color: $colorText2;
+        font-size: 19.96px;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    &__description {
+        font-family: $fontLight;
+        color: $colorText2;
+        font-size: 13.97px;
+        line-height: 17px;
+        text-align: center;
     }
 }
 
@@ -290,9 +331,7 @@ a{
     }
     &__block {
         min-height: 448px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        @include flexAround();
     }
     &__left-block {
         max-width: 360px;
@@ -305,6 +344,7 @@ a{
         margin: 0 auto 30px;
     }
     &__quote {
+        font-family: $fontItalic;
         color: $backBlockColor;
         font-size: 20px;
         line-height: 24px;
@@ -315,6 +355,7 @@ a{
         min-height: 142px;
     }
     &__title {
+        font-family: $fontBold;
         color: $backBlockColor;
         font-size: 24px;
         line-height: 167.2%;
@@ -322,6 +363,7 @@ a{
         text-transform: uppercase;
     }
     &__text {
+        font-family: $fontRegular;
         color: $backBlockColor;
         font-size: 18px;
         line-height: 167.2%;
@@ -332,8 +374,7 @@ a{
     
     &__block-form{
         max-width: 356px;
-        display: flex; /*нужно чтобы input и button склеились*/
-        justify-content: center;
+        @include flexCenter();/*нужно чтобы input и button склеились*/
     }
     &__input-subscribe {
         color: $backBlockColor;
@@ -345,6 +386,7 @@ a{
         border-radius: 25px 0 0 25px;
     }
     &__button-subscribe {
+        font-family: $fontRegular;
         color: $colorText1;
         font-size: 14px;
         line-height: 17px;
@@ -357,47 +399,15 @@ a{
     }
 }
 
-.feature {
-    background-color: $backBlockColor;
-    &__items {
-        min-height: 341px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-    }
-    &__item{
-        max-width: 360px;
-        min-height: 133px;
-    }
-    &__image {
-        display: block;
-        margin: 0 auto 19px;
-    }
-    &__title {
-        color: $colorText2;
-        font-size: 19.96px;
-        line-height: 24px;
-        text-align: center;
-        margin-bottom: 16px;
-    }
-    &__description {
-        color: $colorText2;
-        font-size: 13.97px;
-        line-height: 17px;
-        text-align: center;
-    }
-}
-
 .footer {
     background-color: $backBlockColor;
     &__block{
         min-height: 79px;
-        display: flex;
-        justify-content: space-between;
+        @include flexBetween();
         align-items: center;
     }
     &__rights {
+        font-family: $fontRegular;
         color: $colorText2;
         font-size: 16px;
         line-height: 19px;
