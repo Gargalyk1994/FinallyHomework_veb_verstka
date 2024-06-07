@@ -22,7 +22,7 @@
     }
     &__prev, &__next{
         padding: 12px 17px;
-        background-color: #2a2a2a26;
+        background-color: $backBlockColor;
         &:hover path{
             fill: $accent-color;
         }
@@ -34,7 +34,7 @@
         max-width: 1140px;
         min-height: 600px;
         border: 1px solid #EAEAEA;
-        background-color: #fff;
+        background-color: $colorText1;
         text-align: center;
         margin-bottom: 126px;
     }
@@ -48,7 +48,6 @@
         color: $accent-color;
         font-family: $fontRegular;
         font-weight: 400;
-        font-size: 14px;
         margin-bottom: 12px;
         &::after{
             display: block;
@@ -74,7 +73,6 @@
     }
     &__text{
         font-family: $fontRegular;
-        font-size: 14px;
         text-align: center;
         color: #5e5e5e;
         margin-bottom: 32px;
@@ -82,7 +80,7 @@
     &__price{
         font-family: $fontRegular;
         font-size: 24px;
-        color: #ef5b70;
+        color: $accent-color;
     }
     &__top{
         border-bottom: 1px solid #EAEAEA;
@@ -97,7 +95,6 @@
         gap: 10px;
         font-family: $fontRegular;
         font-weight: 400;
-        font-size: 14px;
         color: $colorText3;
     }
     &__button{

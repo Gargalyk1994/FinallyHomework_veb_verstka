@@ -5,7 +5,10 @@
 html {
     box-sizing: border-box;
 }
-  
+
+body{
+    font-size: 14px;
+}
 
 *,
 *::before,
@@ -105,6 +108,7 @@ a{
 }
 
 .heading {
+    position: relative;
     background-color: $pink-color;
     &__box{
         height: 148px;
@@ -114,12 +118,12 @@ a{
     }
     &__title{
         font-family: $fontRegular;
+        font-weight: 400;
         font-size: 24px;
         color: $accent-color;
     }
     &__breadcrumbs-item{
         font-family: $fontLight;
-        font-size: 14px;
         color: $colorText3;
         &:not(:last-of-type)::after{
             content: "/";
@@ -157,26 +161,22 @@ a{
     &__item{
         color: $colorText3;
         font-family: $fontRegular;
-        font-size: 14px;
         line-height: 17px;
     }
     &__title{
         color: #000;
         font-family: $fontBold;
-        font-size: 14px;
         line-height: 17px;
         text-transform: uppercase;
         margin-bottom: 24px;
     }
     &__links{
-        display: flex;
-        flex-direction: column;
+        @include flexColumn();
         gap: 11px; 
         margin-bottom: 20px;
     }
     &__for-people{
         font-family: $fontRegular;
-        font-size: 14px;
         line-height: 17px;
         color: $accent-color;
         text-transform: uppercase;
@@ -184,9 +184,8 @@ a{
         margin-bottom: 11px;
     }
     &__link{
-        color: #6f6e6e;
+        color: $colorText3;
         font-family: $fontRegular;
-        font-size: 14px;
         line-height: 17px;
         text-decoration: none;
         &:hover{
@@ -249,7 +248,6 @@ a{
         display: none;
         color: $colorText1;
         font-family: $fontRegular;
-        font-size: 14px;
         line-height: 17px;
     }
     &__dark-background{
@@ -277,8 +275,7 @@ a{
     }
     &__card-description {
         font-family: $fontLight;
-        color: #5d5d5d;
-        font-size: 14px;
+        color: $colorText3;
         line-height: 17px;
         margin-bottom: 16px;
     }
@@ -308,7 +305,7 @@ a{
     &__title {
         font-family: $fontRegular;
         color: $colorText2;
-        font-size: 19.96px;
+        font-size: 20px;
         line-height: 24px;
         text-align: center;
         margin-bottom: 16px;
@@ -316,7 +313,6 @@ a{
     &__description {
         font-family: $fontLight;
         color: $colorText2;
-        font-size: 13.97px;
         line-height: 17px;
         text-align: center;
     }
@@ -327,7 +323,7 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     &__bgc{
-        background-color: rgba(244, 244, 244, 0.7);
+        background-color: #f4f4f4b3;
     }
     &__block {
         min-height: 448px;
@@ -364,6 +360,7 @@ a{
     }
     &__text {
         font-family: $fontRegular;
+        font-weight: 400;
         color: $backBlockColor;
         font-size: 18px;
         line-height: 167.2%;
@@ -378,8 +375,8 @@ a{
     }
     &__input-subscribe {
         color: $backBlockColor;
-        font-size: 14px;
         line-height: 17px;
+        background-color: #e1e1e1;;
         /* max-width: 256px; */
         min-height: 49px;
         padding: 7px 64px 6px 22px;
@@ -388,7 +385,6 @@ a{
     &__button-subscribe {
         font-family: $fontRegular;
         color: $colorText1;
-        font-size: 14px;
         line-height: 17px;
         text-align: center;
         /* max-width: 100px; */

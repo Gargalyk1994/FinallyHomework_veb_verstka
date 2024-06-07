@@ -1,0 +1,145 @@
+@import './normalize.scss';
+@import './commonStyles.scss';
+@import './fonts.scss';
+@import './mixins.scss';
+@import './vars.scss';
+
+.registration{
+    &__box{
+        padding: 64px 0 96px;
+        @include flexBetween();
+        gap: 128px;
+    }
+    &__block-forms{
+        max-width: 360px;
+        @include flexColumn();
+        gap: 32px;
+    }
+    &__block-loyality{
+        max-width: 652px;
+        @include flexColumn();
+        gap: 22px;
+    }
+}
+
+.block-forms{
+    &__form-person{
+        @include flexColumn();
+        gap: 20px;
+    }
+    &__form-gender{
+        display: flex;
+        gap: 10px;
+    }
+    &__form-registration{
+        @include flexColumn();
+        gap: 20px;
+        margin-bottom: 6px;
+    }
+    &__btn-join{
+        width: 167px;
+        height: 50px;
+        background-color: $accent-color;
+        @include flexCenter();
+        gap: 20px;
+        cursor: pointer;
+    }
+    &__btn-title{
+        color: $colorText1;
+        font-family: $fontRegular;
+        font-weight: 400;
+        line-height: 17px;
+        text-transform: uppercase;
+    }
+}
+
+.form-person{
+    &__title{
+        color: $backBlockColor;
+        font-family: $fontLight;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: capitalize;
+    }
+    &__name{
+        padding: 15px 18px;
+        border: 1px solid $borderColor;
+        &::placeholder{
+            color: #b1b1b1;
+            font-family: $fontLight;
+            font-size: 13px;
+            line-height: 16px;
+        }
+    }
+}
+
+.form-gender{
+    &__male-label{
+        margin-right: 10px;
+    }
+    &__male-label, &__female-label{
+        color: #000000;
+        font-family: $fontLight;
+        font-size: 11px;
+        line-height: 13px;
+    }
+}
+
+.form-registration{
+    &__title{
+        color: $backBlockColor;
+        font-family: $fontLight;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    &__email, &__password{
+        padding: 15px 18px;
+        border: 1px solid $borderColor;
+        &::placeholder{
+            color: #b1b1b1;
+            font-family: $fontLight;
+            font-size: 13px;
+            line-height: 16px;
+        }
+    }
+    &__help{
+        color: #b1b1b1;
+        font-family: $fontLight;
+        font-size: 13px;
+        line-height: 16px;
+    }
+}
+
+.block-loyality{
+    &__title{
+        color: #000000;
+        font-family: $fontLight;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        text-transform: uppercase;
+    }
+    &__text{
+        color: #000000;
+        font-family: $fontLight;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 29px;
+    }
+    &__privileges{
+        list-style-type: none;
+        @include flexColumn();
+        gap: 16px;
+    }
+    &__privilege{
+        color: #000000;
+        font-family: $fontLight;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 29px;
+        &::before{
+            content: url(../images/tick.svg);
+            margin-right: 22px;
+        }
+    }
+}

@@ -36,7 +36,7 @@
     }
     &__box{
         padding: 22px 22px 62px 31px;
-        background-color: #fff;
+        background-color: $colorText1;
     }
     &__top{
         @include flexBetween();
@@ -88,8 +88,7 @@
         @include button();
         font-family: $fontRegular;
         font-weight: 400;
-        font-size: 14px;
-        border: 1px solid #a4a4a4;
+        border: 1px solid $borderColor;
         color: #000;
         text-transform: uppercase;
     }
@@ -103,13 +102,13 @@
         font-family: $fontRegular;
         font-weight: 400;
         font-size: 16px;
-        color: #222;
+        color: $backBlockColor;
         text-transform: uppercase;
     }
     &__adress{
         width: 360px;
         height: 45px;
-        border: 1px solid #a4a4a4;
+        border: 1px solid $borderColor;
         padding: 13px 17px 16px;
     }
     &__button{
@@ -119,8 +118,8 @@
         font-family: $fontRegular;
         font-weight: 400;
         font-size: 11px;
-        color: #4a4a4a;
-        border: 1px solid #a4a4a4;
+        color: $colorTextBtn;
+        border: 1px solid $borderColor;
         padding: 8px 13px 12px;
         text-transform: uppercase;
     }
@@ -132,9 +131,8 @@
     &__total{
         @include flexEnd();
         gap: 70px;
-        color: #4a4a4a;
+        color: $colorTextBtn;
         font-family: $fontRegular;
-        font-weight: 400;
         text-transform: uppercase;
         &:first-child{
             margin-bottom: 13px;
@@ -158,7 +156,7 @@
         }
     }
     &__grand-price{
-        font-weight: 700;
+        font-family: $fontBold;
         color: $accent-color;
     }
     &__button{
@@ -166,12 +164,13 @@
         padding: 15px 43px;
         font-family: $fontRegular;
         font-size: 16px;
-        color: #fff;
+        color: $colorText1;
         text-transform: uppercase;
         cursor: pointer;
         &:hover{
-            color: #222;
-            background-color: #fff;
+            color: $backBlockColor;
+            background-color: $colorText1;
+            ;
             border: 1px solid $colorText3;
         }
     }
