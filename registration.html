@@ -38,7 +38,7 @@
                         <button class="navigation__cart">
                             <img src="images/cart.svg" alt="Cart" class="navigation__cart-icon">
                         </button>
-                        <span class="counter-cart">5</span>
+                        <span class="navigation__count-cart">5</span>
                     </div>
                 </nav>
             </div>
@@ -96,24 +96,24 @@
     <section class="registration">
         <div class="container">
             <div class="registration__box">
-                <div class="registration__block-forms">
-                    <form action="#" class="block-forms__form-person">
+                <form action="#" class="registration__block-forms">
+                    <div class="block-forms__form-person">
                         <legend class="form-person__title">Your name</legend>
                         <input type="text"  class="form-person__name" placeholder="First Name" required>
                         <input type="text"  class="form-person__name" placeholder="Last Name" required>
-                    </form>
-                    <form action="#" class="block-forms__form-gender">
+                    </div>
+                    <div class="block-forms__form-gender">
                         <input id="male" type="radio" class="form-gender__male">
                         <label for="male" class="form-gender__male-label">Male</label>
                         <input id="female" type="radio" class="form-gender__male">
                         <label for="female" class="form-gender__male-label">Female</label>
-                    </form>
-                    <form action="#" class="block-forms__form-registration">
+                    </div>
+                    <div class="block-forms__form-registration">
                         <legend class="form-registration__title">Login details</legend>
                         <input type="email" class="form-registration__email" placeholder="Email" required>
                         <input type="password" class="form-registration__password" placeholder="Password" required>
                         <p class="form-registration__help">Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
-                    </form>
+                    </div>
                     <button class="block-forms__btn-join">
                         <h3 class="block-forms__btn-title">Join now</h3>
                         <svg width="17.000977" height="9.918610" viewBox="0 0 17.001 9.91861" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -121,7 +121,7 @@
                             <path id="Vector" d="M0 4.95C0 4.77 0.07 4.59 0.2 4.45C0.34 4.32 0.52 4.25 0.7 4.25L15.58 4.25C15.77 4.25 15.95 4.32 16.08 4.45C16.21 4.59 16.29 4.77 16.29 4.95C16.29 5.14 16.21 5.32 16.08 5.46C15.95 5.59 15.77 5.66 15.58 5.66L0.7 5.66C0.52 5.66 0.34 5.59 0.2 5.46C0.07 5.32 0 5.14 0 4.95Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
                         </svg>
                     </button>
-                </div>
+                </form>
                 <div class="registration__block-loyality">
                     <h2 class="block-loyality__title">Loyality has its perks</h2>
                     <p class="block-loyality__text">Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these as soon as you join:</p>

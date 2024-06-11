@@ -343,9 +343,6 @@ template {
 }
 html {
   box-sizing: border-box;
-}
-
-body {
   font-size: 14px;
 }
 
@@ -436,7 +433,7 @@ a {
 }
 .header .navigation__count-cart {
   display: block;
-  font-size: 12px;
+  font-size: 0.8em;
   font-family: "Lato-Regular", sans-serif;
   line-height: 14px;
   color: #ffffff;
@@ -458,6 +455,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .heading__title {
   font-family: "Lato-Regular", sans-serif;
@@ -539,7 +537,8 @@ a {
 
 .products__cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-items: center;
   gap: 25px 30px;
   margin-bottom: 42px;
 }
@@ -730,7 +729,7 @@ a {
   background-color: #e1e1e1;
   /* max-width: 256px; */
   min-height: 49px;
-  padding: 7px 64px 6px 22px;
+  padding: 6px 22px;
   border-radius: 25px 0 0 25px;
 }
 .subscribe-info__button-subscribe {
@@ -812,6 +811,7 @@ a {
 }
 .registration__box {
   padding: 64px 0 96px;
+  font-size: 16px;
   display: flex;
   justify-content: space-between;
   gap: 128px;
@@ -865,7 +865,7 @@ a {
 .form-person__title {
   color: #222224;
   font-family: "Lato-Light", sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 19px;
   text-transform: capitalize;
 }
@@ -876,13 +876,13 @@ a {
 .form-person__name::-moz-placeholder {
   color: #b1b1b1;
   font-family: "Lato-Light", sans-serif;
-  font-size: 13px;
+  font-size: 0.8em;
   line-height: 16px;
 }
 .form-person__name::placeholder {
   color: #b1b1b1;
   font-family: "Lato-Light", sans-serif;
-  font-size: 13px;
+  font-size: 0.8em;
   line-height: 16px;
 }
 
@@ -892,14 +892,14 @@ a {
 .form-gender__male-label, .form-gender__female-label {
   color: #000000;
   font-family: "Lato-Light", sans-serif;
-  font-size: 11px;
+  font-size: 0.7em;
   line-height: 13px;
 }
 
 .form-registration__title {
   color: #222224;
   font-family: "Lato-Light", sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 19px;
 }
 .form-registration__email, .form-registration__password {
@@ -909,19 +909,19 @@ a {
 .form-registration__email::-moz-placeholder, .form-registration__password::-moz-placeholder {
   color: #b1b1b1;
   font-family: "Lato-Light", sans-serif;
-  font-size: 13px;
+  font-size: 0.8em;
   line-height: 16px;
 }
 .form-registration__email::placeholder, .form-registration__password::placeholder {
   color: #b1b1b1;
   font-family: "Lato-Light", sans-serif;
-  font-size: 13px;
+  font-size: 0.8em;
   line-height: 16px;
 }
 .form-registration__help {
   color: #b1b1b1;
   font-family: "Lato-Light", sans-serif;
-  font-size: 13px;
+  font-size: 0.8em;
   line-height: 16px;
 }
 
@@ -929,14 +929,14 @@ a {
   color: #000000;
   font-family: "Lato-Light", sans-serif;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 1.5em;
   line-height: 29px;
   text-transform: uppercase;
 }
 .block-loyality__text {
   color: #000000;
   font-family: "Lato-Light", sans-serif;
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 300;
   line-height: 29px;
 }
@@ -949,11 +949,134 @@ a {
 .block-loyality__privilege {
   color: #000000;
   font-family: "Lato-Light", sans-serif;
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 300;
   line-height: 29px;
 }
 .block-loyality__privilege::before {
   content: url(../images/tick.svg);
   margin-right: 22px;
+}
+
+@media screen and (max-width: 1200px) {
+  .navigation__box, .header__main-block, .footer__block {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .offer__box, .products__cards, .heading__box, .cart__wrapper, .registration__box {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .products__card:last-of-type {
+    display: none;
+  }
+  .cart {
+    padding-top: 65px;
+  }
+  .cart__wrapper {
+    justify-content: center;
+    gap: 64px;
+  }
+  .cart__right-block {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .main-block__image-box, .navigation__cart, .main-block__image, .navigation__profile, .navigation__count-cart {
+    display: none;
+  }
+  .navigation__count-cart {
+    position: absolute;
+    left: 99999999999999px;
+    overflow: hidden;
+  }
+  .main-block {
+    min-height: 365px;
+    padding: 148px 56px;
+    font-size: 44px;
+  }
+  .offer {
+    padding: 65px 20px 96px;
+  }
+  .products__cards {
+    padding: 0 20px;
+  }
+  .feature {
+    padding: 48px 14px 64px;
+  }
+  .feature__items {
+    flex-direction: column;
+  }
+  .subscribe-info__block {
+    padding: 64px 20px 100px;
+    flex-direction: column;
+  }
+  .cart {
+    padding: 40px 10px 96px;
+  }
+  .cart__wrapper {
+    gap: 48px;
+  }
+  .cart__right-block {
+    flex-direction: column;
+    gap: 48px;
+  }
+  .card {
+    font-size: 22px;
+  }
+  .registration__box {
+    padding-top: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+  .filter-sort {
+    left: 59%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .heading__box {
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+  }
+  .navigation__box, .header__main-block, .footer__block {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .main-block {
+    font-size: 38px;
+  }
+  .card {
+    font-size: 14px;
+    height: 188px;
+  }
+  .card__box {
+    padding: 13px 13px 56px 17px;
+  }
+  .card__top {
+    margin-bottom: 25px;
+  }
+  .card__btn {
+    padding: 9px 18px;
+    text-transform: none;
+  }
+  .registration__box {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .main-block {
+    font-size: 20px;
+  }
+  .main-block__image-box, .navigation__cart, .main-block__image, .navigation__profile {
+    display: none;
+  }
+  .footer__block {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    gap: 40px;
+    padding: 43px 20px 10px;
+  }
 }/*# sourceMappingURL=registration.css.map */

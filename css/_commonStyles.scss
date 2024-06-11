@@ -4,9 +4,6 @@
 
 html {
     box-sizing: border-box;
-}
-
-body{
     font-size: 14px;
 }
 
@@ -93,7 +90,7 @@ a{
         }
         &__count-cart{
             display: block;
-            font-size: 12px;
+            font-size: 0.8em;
             font-family: $fontRegular;
             line-height: 14px;
             color: $colorText1;
@@ -115,6 +112,7 @@ a{
         text-transform: uppercase;
         @include flexBetween();
         align-items: center;
+        flex-wrap: wrap;
     }
     &__title{
         font-family: $fontRegular;
@@ -198,7 +196,8 @@ a{
 .products{
     &__cards {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        justify-items: center; 
         gap: 25px 30px;
         margin-bottom: 42px;
     }
@@ -379,7 +378,7 @@ a{
         background-color: #e1e1e1;;
         /* max-width: 256px; */
         min-height: 49px;
-        padding: 7px 64px 6px 22px;
+        padding: 6px 22px;
         border-radius: 25px 0 0 25px;
     }
     &__button-subscribe {

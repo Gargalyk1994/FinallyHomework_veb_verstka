@@ -7,6 +7,7 @@
 .registration{
     &__box{
         padding: 64px 0 96px;
+        font-size: 16px;
         @include flexBetween();
         gap: 128px;
     }
@@ -57,7 +58,7 @@
     &__title{
         color: $backBlockColor;
         font-family: $fontLight;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 19px;
         text-transform: capitalize;
     }
@@ -67,7 +68,7 @@
         &::placeholder{
             color: #b1b1b1;
             font-family: $fontLight;
-            font-size: 13px;
+            font-size: 0.8em;
             line-height: 16px;
         }
     }
@@ -80,7 +81,7 @@
     &__male-label, &__female-label{
         color: #000000;
         font-family: $fontLight;
-        font-size: 11px;
+        font-size: 0.7em;
         line-height: 13px;
     }
 }
@@ -89,7 +90,7 @@
     &__title{
         color: $backBlockColor;
         font-family: $fontLight;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 19px;
     }
     &__email, &__password{
@@ -98,14 +99,14 @@
         &::placeholder{
             color: #b1b1b1;
             font-family: $fontLight;
-            font-size: 13px;
+            font-size: 0.8em;
             line-height: 16px;
         }
     }
     &__help{
         color: #b1b1b1;
         font-family: $fontLight;
-        font-size: 13px;
+        font-size: 0.8em;
         line-height: 16px;
     }
 }
@@ -115,14 +116,14 @@
         color: #000000;
         font-family: $fontLight;
         font-weight: 300;
-        font-size: 24px;
+        font-size: 1.5em;
         line-height: 29px;
         text-transform: uppercase;
     }
     &__text{
         color: #000000;
         font-family: $fontLight;
-        font-size: 24px;
+        font-size: 1.5em;
         font-weight: 300;
         line-height: 29px;
     }
@@ -134,7 +135,7 @@
     &__privilege{
         color: #000000;
         font-family: $fontLight;
-        font-size: 24px;
+        font-size: 1.5em;
         font-weight: 300;
         line-height: 29px;
         &::before{
@@ -143,3 +144,5 @@
         }
     }
 }
+
+@import './media.scss';

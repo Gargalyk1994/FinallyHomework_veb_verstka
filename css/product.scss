@@ -22,7 +22,7 @@
     }
     &__prev, &__next{
         padding: 12px 17px;
-        background-color: $backBlockColor;
+        background-color: #2a2a2a26;
         &:hover path{
             fill: $accent-color;
         }
@@ -119,3 +119,5 @@
         background-image: url(../images/product6.png);
     }
 }
+
+@import './media.scss';

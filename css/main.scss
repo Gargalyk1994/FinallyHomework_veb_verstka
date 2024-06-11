@@ -7,6 +7,7 @@
 .header {
     .main-block {
         max-height: 764px;
+        font-size: 48px;
         background-color: $pink-color;
         @include flexCenter();
         position: relative;
@@ -18,7 +19,6 @@
             height: 100%;
             max-width: 405px;
             font-family: $fontBold;
-            font-size: 32px;
             font-weight: 700;
         }
         &__title-h1::before{
@@ -31,15 +31,15 @@
         }
         &__title-h1 {
             font-weight: 900;
-            font-size: 48px;
+            font-size: 1em;
             line-height: 1;
             text-transform: uppercase;
         }
         &__title-other1 {
-            font-size: 32px;
+            font-size: 0.7em;
         }
         &__title-other2{
-            font-size: 32px;
+            font-size: 0.7em;
             color: $accent-color;
         }
     }
@@ -50,12 +50,9 @@
     &__box {
         @include flexCenter();
         gap: 30px;
-        &:last-child{
-            flex-wrap: wrap;
-        }
+        flex-wrap: wrap;
     }
     &__card{
-        @include flexCenter();
         height: 260px;
         width: 360px;
         background-size: cover;
@@ -78,7 +75,7 @@
         background-image: url(../images/offer-image3.png);
     }
     &__card4 {
-        width: 100%;
+        flex-grow: 1;
         height: 180px;
         background-image: url(../images/offer-image4.png);
     }

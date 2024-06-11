@@ -8,6 +8,7 @@
     padding: 96px 0 128px;
     &__wrapper{
         @include flexBetween();
+        flex-wrap: wrap;
     }
     &__left-block{
         &_wrap-cards{
@@ -23,16 +24,14 @@
 }
 
 .card{
+    font-size: 22px;
     max-width: 652px;
-    height: 306px;
+    max-height: 306px;
     display: flex;
-    box-shadow: 17px 19px 24px 0 rgba(0, 0, 0, 0.13);
-    &__wrapper{
-        
-    }
+    box-shadow: 17px 19px 24px 0 #00000021;
     &__image{
         height: 100%;
-        width: 262px;
+        max-width: 262px;
     }
     &__box{
         padding: 22px 22px 62px 31px;
@@ -45,7 +44,7 @@
     &__title{
         font-family: $fontRegular;
         font-weight: 400;
-        font-size: 24px;
+        font-size: 1.1em;
         color: $backBlockColor;
         text-transform: uppercase;
         margin-right: 57px;
@@ -63,7 +62,7 @@
     &__character{
         font-family: $fontRegular;
         font-weight: 400;
-        font-size: 22px;
+        font-size: 1em;
         color: #575757;
         &_accent-text{
             color: $accent-color;
@@ -176,4 +175,5 @@
     }
 }
 
+@import './media.scss';
 
