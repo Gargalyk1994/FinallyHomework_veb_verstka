@@ -132,6 +132,7 @@
             color:$colorText3;
         }
     }
+
 }
 
 .products{
@@ -161,6 +162,34 @@
     }
     &__image-box-background9{
         background-image: url(../images/product9.png);
+    }
+    &__pages{
+        width: 284px;
+        @include flexCenter();
+        gap: 18px;
+        padding: 16px;
+        border: 1px solid $borderColor;
+        margin: 0 auto 96px;
+    }
+    &__prev-page, &__next-page{
+        &:hover svg path{
+            fill: $accent-color;
+        }
+    }
+    &__list-pages{
+        list-style-type: none;
+        @include flexCenter();
+        gap: 15px;
+        
+    }
+    &__page {
+        font-family: $fontLight;
+        font-weight: 300;
+        font-size: 16px;
+        color: $borderColor;
+        &:hover {
+            color: $accent-color;
+        }
     }
 }
 

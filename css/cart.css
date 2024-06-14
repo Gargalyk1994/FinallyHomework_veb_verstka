@@ -1034,7 +1034,7 @@ a {
     left: 99999999999999px;
     overflow: hidden;
   }
-  .main-block {
+  .main-block__right-block {
     min-height: 365px;
     padding: 148px 56px;
     font-size: 44px;
@@ -1075,7 +1075,7 @@ a {
     gap: 22px;
   }
   .filter-sort {
-    left: 59%;
+    left: 50%;
   }
 }
 @media screen and (max-width: 425px) {
@@ -1088,7 +1088,7 @@ a {
     padding-left: 16px;
     padding-right: 16px;
   }
-  .main-block {
+  .main-block__right-block {
     font-size: 38px;
   }
   .card {
@@ -1105,8 +1105,23 @@ a {
     padding: 9px 18px;
     text-transform: none;
   }
+  .offer__card4 {
+    height: 110px;
+  }
   .registration__box {
     gap: 40px;
+  }
+  .filter__heading {
+    display: none;
+  }
+  .filter__title svg {
+    width: 38px;
+    height: 25px;
+  }
+  .filter-sort {
+    font-size: 12px;
+    top: 45%;
+    left: 23%;
   }
 }
 @media screen and (max-width: 376px) {
