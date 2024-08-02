@@ -12,7 +12,7 @@ closeMenu.addEventListener('click', toggleMenu);
 
 //Добавление карточек товара в каталог
 const urlOnDataCatalog = '../json/forCatalog.json';
-async function getData(urlOnDataCatalog) {
+async function getDataForCatalog(urlOnDataCatalog) {
     try {
         const response = await fetch (urlOnDataCatalog);
         const data = await response.json();
@@ -22,11 +22,13 @@ async function getData(urlOnDataCatalog) {
     }
 }
 document.addEventListener("DOMContentLoaded", async (e) => {
-    const data = await getData(urlOnDataCatalog);
-    const list = document.querySelector(".products__cards");
+    const data = await getDataForCatalog(urlOnDataCatalog);
+    const listCatalog = document.querySelector(".products__cards_for-catalog");
+    const listMain = document.querySelector(".products__cards_for-main");
+    const listProduct = document.querySelector(".products__cards_for-product");
     //добавление карточек через JS
     data.forEach((element, index) => {
-        list.insertAdjacentHTML(
+        listCatalog.insertAdjacentHTML(
             "beforeend",`
             <div class="products__card">
                 <div class="products__image-box products__image-box-background${[index + 1]}">
@@ -45,12 +47,15 @@ document.addEventListener("DOMContentLoaded", async (e) => {
             </div>
         `);
     });
+    console.log(listMain.parentNode.children);
+    listMain = listCatalog.parentNode.children.splice(0, 6);
+    listProduct = listCatalog.parentNode.children.splice(0, 3);
 });
 
 
 //Добавление и удаление из корзины
 const urlOnDataCart = '../json/forCart.json';
-async function getData(urlOnDataCart) {
+async function getDataForCart(urlOnDataCart) {
     try {
         const response = await fetch (urlOnDataCart);
         const data = await response.json();
@@ -60,7 +65,7 @@ async function getData(urlOnDataCart) {
     }
 }
 document.addEventListener("DOMContentLoaded", async (e) => {
-    const data = await getData(urlOnDataCart);
+    const data = await getDataForCart(urlOnDataCart);
     const list = document.querySelector(".cart__left-block_wrap-cards");
     //добавление карточек через JS
     data.forEach((element) => {
