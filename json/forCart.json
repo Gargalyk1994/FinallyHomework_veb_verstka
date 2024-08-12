@@ -3,7 +3,7 @@
     {
         "id": 1,
         "price": 300,
-        "count": 2,
+        "count": 1,
         "color": "Red",
         "size": "XL",
         "img": "./images/image-product-for-cart1.png",
@@ -17,5 +17,68 @@
         "size": "XL",
         "img": "./images/image-product-for-cart2.png",
         "title": "ELLERY X M'O CAPSULE"
+    },
+    {
+        "id": 3,
+        "price": 300,
+        "count": 1,
+        "color": "Red",
+        "size": "XL",
+        "img": "./images/image-product-for-cart1.png",
+        "title": "MANGO PEOPLE T-SHIRT"
+    },
+    {
+        "id": 4,
+        "price": 52,
+        "count": 1,
+        "color": "Black",
+        "size": "XL",
+        "img": "./images/image-product-for-cart2.png",
+        "title": "ELLERY X M'O CAPSULE"
+    },
+    {
+        "id": 5,
+        "price": 300,
+        "count": 1,
+        "color": "Red",
+        "size": "XL",
+        "img": "./images/image-product-for-cart1.png",
+        "title": "MANGO PEOPLE T-SHIRT"
+    },
+    {
+        "id": 6,
+        "price": 52,
+        "count": 1,
+        "color": "Black",
+        "size": "XL",
+        "img": "./images/image-product-for-cart2.png",
+        "title": "ELLERY X M'O CAPSULE"
+    },
+    {
+        "id": 7,
+        "price": 300,
+        "count": 1,
+        "color": "Red",
+        "size": "XL",
+        "img": "./images/image-product-for-cart1.png",
+        "title": "MANGO PEOPLE T-SHIRT"
+    },
+    {
+        "id": 8,
+        "price": 52,
+        "count": 1,
+        "color": "Black",
+        "size": "XL",
+        "img": "./images/image-product-for-cart2.png",
+        "title": "ELLERY X M'O CAPSULE"
+    },
+    {
+        "id": 9,
+        "price": 300,
+        "count": 1,
+        "color": "Red",
+        "size": "XL",
+        "img": "./images/image-product-for-cart1.png",
+        "title": "MANGO PEOPLE T-SHIRT"
     }
 ]
